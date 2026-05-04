@@ -2,38 +2,35 @@ name: YouTube Telegram Stats
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 * * * *"   # каждый час
   workflow_dispatch:
 
 permissions:
-  contents: write   # ← ВОТ ЭТО ДОБАВИТЬ
+  contents: write
 
 jobs:
   run:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # 1. Скачать репозиторий
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Установить Python
+      # 2. Установить Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Установить библиотеки
+      # 3. Установить библиотеки
+      - name: Install dependencies
         run: pip install requests
 
-      - name: Запуск
+      # 4. Запуск скрипта
+      - name: Run bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python bot.py
-
-      - name: Сохранить изменения
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add channels.json stats_log.csv
-          git commit -m "Update stats" || echo "No changes"
-          git push
