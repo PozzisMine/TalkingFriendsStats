@@ -95,6 +95,8 @@ def write_log(name, channel_id, subs, views, videos, change_subs, change_views, 
 
 
 def main():
+    send_telegram("✅ Бот работает! Тест")
+    
     channels = load_channels()
 
     for ch in channels:
