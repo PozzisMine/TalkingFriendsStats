@@ -2,7 +2,7 @@ name: YouTube Telegram Stats
 
 on:
   schedule:
-    - cron: "0 * * * *"   # каждый час
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,24 +13,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Скачать репозиторий
-      - name: Checkout
+      - name: Скачать репозиторий
         uses: actions/checkout@v4
 
-      # 2. Установить Python
-      - name: Setup Python
+      - name: Установить Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3. Установить библиотеки
-      - name: Install dependencies
+      - name: Установить библиотеки
         run: pip install requests
 
-      # 4. Запуск скрипта
-      - name: Run bot
+      - name: Запустить бота
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python bot.py
+
+      - name: Сохранить обновлённые файлы
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Нет изменений"
+          else
+            git commit -m "Update bot data"
+            git push
+          fi
