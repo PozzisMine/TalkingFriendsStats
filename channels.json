@@ -12,30 +12,30 @@
     "name": "Talking Tom & Friends TV",
     "deleted": false,
     "last_subs": 16200000,
-    "last_views": 7188094835,
-    "last_videos": 1238
+    "last_views": 7188289421,
+    "last_videos": 1252
   },
   {
     "id": "UCwC-DciMGGk9AgpJ3hpreHw",
     "name": "Talking Tom & Friends TV Mini",
     "deleted": false,
     "last_subs": 9110000,
-    "last_views": 3649526262,
-    "last_videos": 1194
+    "last_views": 3649836592,
+    "last_videos": 1196
   },
   {
     "id": "UCPcynnZcILjm0e2aaaTuCjw",
     "name": "Talking Angela",
     "deleted": false,
     "last_subs": 13900000,
-    "last_views": 4696270514,
-    "last_videos": 683
+    "last_views": 4696648698,
+    "last_videos": 684
   },
   {
     "id": "UCQw_lrIOCGzVzaFS-eoyEQA",
     "name": "Talking Tom & Friends Arabic",
     "deleted": false,
-    "last_subs": 39800,
+    "last_subs": 39900,
     "last_views": 9432908,
     "last_videos": 172
   },
@@ -52,8 +52,8 @@
     "name": "Talking Tom & Friends Español",
     "deleted": false,
     "last_subs": 11000000,
-    "last_views": 5678206228,
-    "last_videos": 1178
+    "last_views": 5679488300,
+    "last_videos": 1183
   },
   {
     "id": "UCnBTGpEQ3LGPW2Shh7fiabg",
@@ -61,15 +61,15 @@
     "deleted": false,
     "last_subs": 10400000,
     "last_views": 4673159232,
-    "last_videos": 1062
+    "last_videos": 1067
   },
   {
     "id": "UCY9xIaF8CIdS23e0W6nHAmg",
     "name": "Talking Tom & Friends Brasil",
     "deleted": false,
     "last_subs": 8200000,
-    "last_views": 3685715623,
-    "last_videos": 1223
+    "last_views": 3685955172,
+    "last_videos": 1229
   },
   {
     "id": "UC3ly5ABqAfilKmzj8Fc8t8w",
@@ -109,7 +109,7 @@
     "deleted": false,
     "last_subs": 1100000,
     "last_views": 345787868,
-    "last_videos": 681
+    "last_videos": 682
   },
   {
     "id": "UC0sykHIFHIShnVK2BWChAGg",
@@ -141,6 +141,6 @@
     "deleted": false,
     "last_subs": 33500000,
     "last_views": 18283909050,
-    "last_videos": 1212
+    "last_videos": 1213
   }
 ]
